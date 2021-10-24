@@ -75,6 +75,28 @@ tar -zcvf [압축파일명.tar.gz] [압축할 대상]
 > find [복사하고싶은 디렉토리 경로] -type d -exec mkdir [복사할 위치 경로]/{} \;
 ```
 
+#### 🔨 실시간 시스템 상태 알아보기
+```shell
+> top
+```
+- 세부필드 정보
+1. `PID` : 프로세스ID
+2. USER : 프로세스 실행시킨 사용자 ID
+3. PR : 프로세스의 우선순위
+4. NI : NICE 값, 일의 NICE VALUE값으로 마이너스를 가지는 프로세스는 우선순위가 높음.
+5. VIRT : 가상메모리 사용량(SWAP+RES)
+6. RES : 현재 페이지가 상주하고 있는 크기(Resident Size)
+7. SHR : 분할된 페이지, 프로세스에 의해 사용된 메모리를 나눈 메모리의 총합
+8. S : 프로세스의 상태 (S - Sleeping, R - Running, W - Swapped out process, Z - Zombies)
+9. %CUP : 프로세스가 사용하는 cpu의 사용율
+10. %MEM : 프로세스가 사용하는 메모리의 사용율
+11. TIME+ : 프로세스가 시작된 이후 경과된 총 시간
+12. COMMAND : 실행된 명령어
+
+- top 명령어 실행후
+    - `shift + p` : cpu사용량이 큰 순서로 정렬
+    - `shift + m` : 메모리 사용량이 큰 순서로 정렬
+    - `shift + t` : 실행된 시간이 큰 순서로 정렬
 
 
 
